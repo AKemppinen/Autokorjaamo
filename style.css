@@ -1,28 +1,23 @@
-
-  html {
+html {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 .Header {
   display: flex;
-  justify-content: center;
-  width: 100%;  
+  justify-content: center; 
   color: #000;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   
 }
 
 .Footer{
   display: flex;
   justify-content: space-between;
-  width: 100%;  
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 
 }
-
-
 
  /* Add a black background color to the top navigation */
 nav {
@@ -67,10 +62,6 @@ display: flex;
 float: left;
 }
 
-
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -78,7 +69,7 @@ body {
 }
 
 .container {
-    width: 70rem;
+    width: 90rem;
     margin: auto;
 }
 
@@ -178,4 +169,8 @@ ul {
 }
 li {
     color: rgb(94, 94, 94);
+}
+
+a {
+    color: rgb(125, 153, 230);
 }
