@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autokorjaamo ZEMPP</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+<body>
+    <div class="container">
+        <header class = Header>
+            <h1 id="Sivun Alkuun" style="color: white;">Autokorjaamo || ZEMPP</h1>
+            </header>
+            
+            <nav>
+                <a href="Etusivu.html">Etusivu</a>
+                <a href="hinnasto.html">Hinnasto</a>
+                <a href="#">Galleria</a>
+                <a href="#">Esittely sivu</a>
+                <a class="active" href="Yhteystiedot.html">Yhteystiedot</a>
+            </nav>
+        <main>
+            <article>
+                <header>
+                    <h2>Yhteystiedot</h2>
+                </header>
+                <figure>
+                    <div id="map"></div>
+                </figure>
+                <figure>
+
+                </figure>
+            </article>
+        </main>
+        <footer class = Footer>
+            <p>Tekijät: Emil Zghaib & Antti Kemppinen</p>
+
+            <p>zempp@gmail.com</p>
+
+            <p>
+                <a href="#Sivun Alkuun">Palaa sivun alkuun</a>
+            </p>
+
+        </footer>
+    </div>
+<script>
+
+  'use strict'
+
+  const map = L.map('map').setView([60.222410691659334, 24.783534794868196], 16);
+  const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+  const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  const tiles = L.tileLayer(tileUrl, {attribution});
+  tiles.addTo(map);
+  L.marker([60.222410691659334, 24.783534794868196]).addTo(map);
+
+
+</script>
+
+</body>
+</html>

@@ -174,3 +174,7 @@ li {
 a {
     color: rgb(125, 153, 230);
 }
+#map {
+  height: 500px;
+  
+}
