@@ -79,7 +79,7 @@ body {
 }
 
 .container {
-    width: 90rem;
+    width: 95rem;
     margin: auto;
 }
 
@@ -183,4 +183,8 @@ li {
 
 a {
     color: rgb(125, 153, 230);
+}
+#map {
+  height: 500px;
+  
 }
