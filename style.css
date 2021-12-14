@@ -14,12 +14,18 @@ html {
 .Footer{
   display: flex;
   justify-content: space-between;
-  position:absolute;
-  bottom:0;
-  width: 100%;  
+  bottom:0; 
   padding-top: 3%;
   padding-bottom: 3%;
 
+}
+
+ul .Kuvat{
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
 }
 
  /* Add a black background color to the top navigation */
@@ -64,6 +70,7 @@ figure .kuva{
 display: flex;
 float: left;
 }
+
 
 body {
     margin: 0;
