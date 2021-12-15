@@ -138,7 +138,6 @@ a {
 }
 #map {
   height: 500px;
-  
 }
 
 .contact-banner {
@@ -220,6 +219,8 @@ button {
   cursor: pointer;
   transition: all 0.5s;
   color: rgb(0, 114, 66);
+  margin-top: 20px; margin-bottom: 20px;
+  
 }
 
 button:hover {
@@ -231,9 +232,26 @@ button:hover {
   color: white;
 }
 
-form {
-  padding: 40px;
-}
 .hidden {
   display: none;
+}
+
+#Navigointi {
+  color: black;
+  padding: 20px;
+  border: 1px solid rgb(0, 114, 66);
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: rgb(0, 114, 66);
+  font-size: 12px;
+}
+#Navigointi:hover, a:active {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 114, 66) 0%,
+    rgb(4, 109, 91) 100%
+  );
+  color: white;
 }

@@ -36,7 +36,10 @@
                 </header>
                 <figure>
                     <div id="map"></div>
-                    
+                    <button onclick="getLocation()">Oma sijainti</button>
+                    <a id="Navigointi" style="margin-top: 20px; margin-bottom: 20px;">Navigoi</a>
+                    <p style="text-align: left;">Osoite: Kilonkallio, 02610 Espoo</p>
+                    <p style="text-align: left;">Sähköposti: zempp@gmail.com</p>
                 </figure>
                 <hr>
             </article>
@@ -96,13 +99,33 @@
 
     'use strict'
 
-    const map = L.map('map').setView([60.222410691659334, 24.783534794868196], 16);
+    const zemppLat = 60.222410691659334;
+    const zemppLong = 24.783534794868196;
+    const map = L.map('map').setView([zemppLat, zemppLong], 13);
     const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     const tiles = L.tileLayer(tileUrl, {attribution});
+    const navigoi = document.getElementById('Navigointi');
     tiles.addTo(map);
-    L.marker([60.222410691659334, 24.783534794868196]).addTo(map);
+    let zempp = L.marker([zemppLat, zemppLong]).addTo(map)
+    .bindPopup('Autokorjaamo ZEMPP')
+    .openPopup();
 
+    function getLocation() {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+    function showPosition(position) {
+        let currentLat = position.coords.latitude;
+        let currentLong = position.coords.longitude;
+        let oma = L.marker([currentLat, currentLong]).addTo(map)
+        .bindPopup('Olet tässä')
+        .openPopup();
+        Navigate(currentLat, currentLong);
+    }
+
+    function Navigate(currentLat, currentLong) {
+        navigoi.href = `https://www.google.com/maps/dir/?api=1&origin=${currentLat},${currentLong}&destination=${zemppLat},${zemppLong}&travelmode=driving`;
+    }
 
     const form = document.querySelector("form[name='contact-form']");
     const viesti = document.querySelector(".viesti");
@@ -110,6 +133,7 @@
     const emailInput = document.querySelector("input[name='email']");
     const phoneInput = document.querySelector("input[name='phone']");
     const messageInput = document.querySelector("textarea[name='message']");
+    
 
     nameInput.isValid = () => !!nameInput.value;
     emailInput.isValid = () => isValidEmail(emailInput.value);
