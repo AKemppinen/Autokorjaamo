@@ -49,7 +49,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: aqua;
+  background-color: #D9D9D9;
   overflow: hidden;
 }
 
@@ -70,7 +70,7 @@ nav a:hover {
 
 /* Add a color to the active/current link */
 nav a.active {
-  background-color: #13293D;
+  background-color: #284B63;
   color: white;
 }
 
@@ -91,7 +91,7 @@ float: left;
 body {
     margin: 0;
     padding: 0;
-    background-color: #CBDFE1;
+    background-color: #3C6E71;
 }
 
 .container {
@@ -100,7 +100,7 @@ body {
 }
 
 header {
-    background-color: #13293D;
+    background-color: #284B63;
     padding: 1rem;
     color: #fff;
 }
@@ -145,7 +145,7 @@ figcaption {
 }
 
 footer {
-    background-color: #13293D;
+    background-color: #284B63;
     text-align: center;
     padding: 1rem;
     color: white;
